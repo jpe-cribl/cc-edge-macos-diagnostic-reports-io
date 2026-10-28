@@ -1,0 +1,24 @@
+# One event per crash or diagnostic report. The lookahead matches the report
+# header forms without consuming them, so each header stays in its own event
+# and the auto timestamp is read from that header.
+# The lookahead requires the opening quote of a quoted timestamp value: a
+# header timestamp is a quoted date string, a body timestamp is a bare number.
+# maxEventBytes is 16 MiB, the ceiling for the largest report class.
+MacOS Crash Reports:
+  lib: custom
+  description: macOS .ips/.crash/.panic/.diag/.hang/.spin/.shutdownStall diagnostic reports; one event per report, header retained by lookahead so the auto timestamp reads the report's own time instead of Cribl arrival time
+  rules:
+    - condition: "true"
+      type: regex
+      timestampAnchorRegex: /^/
+      timestamp:
+        type: auto
+        length: 400
+      timestampTimezone: local
+      timestampEarliest: -420weeks
+      timestampLatest: +1week
+      maxEventBytes: 16777216
+      disabled: false
+      eventBreakerRegex: /^(?=(?:\{[^\n]{0,119}"timestamp":"|Date\/Time:|Use spindump))/m
+      name: crashreport
+  tags: macos,crashreport
