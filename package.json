@@ -1,0 +1,18 @@
+{
+  "name": "cc-edge-macos-diagnostic-reports-io",
+  "version": "0.1.0",
+  "minLogStreamVersion": "4.16.0",
+  "author": "jpe-cribl",
+  "description": "Cribl Edge pack for macOS diagnostic reports: report pipeline and breaker.",
+  "displayName": "macOS Diagnostic Reports",
+  "tags": {
+    "streamtags": [
+      "macos",
+      "crash-reports"
+    ],
+    "dataType": [
+      "logs"
+    ]
+  },
+  "exports": []
+}
