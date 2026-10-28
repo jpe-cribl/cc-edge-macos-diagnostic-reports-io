@@ -1,0 +1,15 @@
+id: default
+groups: {}
+comments: []
+routes:
+  - id: macos_crash_reports
+    name: macOS Diagnostic Reports
+    final: true
+    disabled: false
+    pipeline: macos_crash_reports
+    description: "macOS diagnostic reports routed to the macos_crash_reports pipeline."
+    enableOutputExpression: false
+    targetContext: group
+    filter: "sourcetype=='macos:crashreport'"
+    clones: []
+    output: __group

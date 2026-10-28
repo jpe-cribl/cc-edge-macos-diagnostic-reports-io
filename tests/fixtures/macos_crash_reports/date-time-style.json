@@ -1,0 +1,6 @@
+[
+  {
+    "_time": 1793204441,
+    "_raw": "Date/Time:           2026-10-28 09:20:41.512 -0700\nOS Version:          macOS 26.0 (25A100)\nReport Version:      12\nProcess:             ExampleDaemon [4242]\nPath:                /Library/Example/ExampleDaemon\nIdentifier:          com.example.daemon\nCrashed Thread:      0  Dispatch queue: com.example.daemon.main\n\nException Type:        EXC_CRASH (SIGABRT)\nException Codes:       0x0000000000000000, 0x0000000000000000\n"
+  }
+]

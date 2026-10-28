@@ -1,0 +1,20 @@
+output: default
+functions:
+  # Sets index and sourcetype for macOS crash and diagnostic reports.
+  - id: eval
+    filter: "true"
+    conf:
+      add:
+        - name: index
+          value: "'os'"
+        - name: sourcetype
+          value: "'macos:crashreport'"
+  # True when the event opens with a report header that carries its own
+  # timestamp: a quoted "timestamp" value on the first JSON line, or a
+  # Date/Time: line. False otherwise.
+  - id: eval
+    filter: "sourcetype === 'macos:crashreport'"
+    conf:
+      add:
+        - name: crash_time_in_band
+          value: "/^(?:\\{[^\\n]{0,119}\"timestamp\":\"|Date\\/Time:)/.test(_raw)"

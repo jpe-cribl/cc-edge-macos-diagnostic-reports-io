@@ -1,0 +1,6 @@
+[
+  {
+    "_time": 1793204043,
+    "_raw": "{\"app_name\":\"ExampleApp\",\"timestamp\":\"2026-10-28 09:14:03.00 -0700\",\"app_version\":\"1.2.3\",\"bundleID\":\"com.example.exampleapp\",\"bug_type\":\"309\",\"os_version\":\"macOS 26.0 (25A100)\",\"incident_id\":\"00000000-0000-0000-0000-000000000000\"}\n{\n  \"uptime\" : 120000,\n  \"procLaunch\" : \"2026-10-28 09:10:00.00 -0700\",\n  \"exception\" : {\"type\":\"EXC_BAD_ACCESS\",\"signal\":\"SIGSEGV\"}\n}"
+  }
+]

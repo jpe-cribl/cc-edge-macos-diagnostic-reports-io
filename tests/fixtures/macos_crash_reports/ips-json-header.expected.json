@@ -1,0 +1,7 @@
+[
+  {
+    "index": "os",
+    "sourcetype": "macos:crashreport",
+    "crash_time_in_band": true
+  }
+]
